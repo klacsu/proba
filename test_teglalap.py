@@ -66,3 +66,12 @@ class TestRectangle():
         button_calc = self.browser.find_element(By.ID, 'submit')
         button_calc.click()
         assert self.browser.find_element(By.ID, 'result').text == 'NaN'
+
+    def test_fill_meg_egy(self):
+        input_a = self.browser.find_element(By.ID, 'a')
+        input_a.send_keys('4')
+        input_b = self.browser.find_element(By.ID, 'b')
+        input_b.send_keys('2')
+        button_calc = self.browser.find_element(By.ID, 'submit')
+        button_calc.click()
+        assert self.browser.find_element(By.ID, 'result').text == '12'
